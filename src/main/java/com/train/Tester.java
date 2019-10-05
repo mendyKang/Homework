@@ -13,10 +13,8 @@ public class Tester {
         int total = scanner.nextInt();
         System.out.println("How many round-trip tickets:");
         int round_trip = scanner.nextInt();
-        System.out.println("Total tickets:"+ total+ " Round-trip:" + round_trip +" Total:"+ amount(total, round_trip));
+        Ticket ticket = new Ticket(total, round_trip);
+        System.out.println("Total tickets:"+ total+ " Round-trip:" + round_trip +" Total:"+ ticket.amount());
     }
 
-    public static int amount(int total, int roundTrip){
-        return (int) ((total - roundTrip) * 1000 + (roundTrip * 2000 * 0.9));
-    }
 }
